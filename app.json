@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Camera Roll Curator",
+    "slug": "camera-roll-curator",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "camera-roll-curator",
+    "splash": {
+      "backgroundColor": "#0C0C0C"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.photodump.curator",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Photo Dump Curator needs access to your photo library to analyze and curate your best photos.",
+        "NSPhotoLibraryAddUsageDescription": "Photo Dump Curator needs access to save your curated photo dump."
+      }
+    },
+    "android": {
+      "package": "com.photodump.curator",
+      "permissions": ["READ_MEDIA_IMAGES", "READ_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Photo Dump Curator needs access to your photo library to analyze and curate your best photos.",
+          "savePhotosPermission": "Photo Dump Curator needs access to save your curated photo dump.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
+  }
+}
